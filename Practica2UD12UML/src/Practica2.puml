@@ -1,0 +1,8 @@
+@startuml
+:Agente: as actor1
+(Evaluar Solicitud de Crédito) as UC1
+(Solicitar Información adicional al cliente) as UC2
+actor1 --> UC1
+UC2 ..> UC1 : <<extend>>
+
+@enduml
