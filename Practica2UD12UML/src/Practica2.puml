@@ -1,7 +1,24 @@
 @startuml
-:Cliente Bancario: as actor1
-:Cliente Corporativo: as actor2
-:Cliente Normal: as actor3
-actor2 --|> actor1
-actor3 --|> actor1
+:Empleado: as actor1
+rectangle "Empresa Pedidos"{
+usecase "Introducir Pedido" as UC1
+usecase "Cancelar Pedido" as UC2
+usecase "Obtener Estado Pedido" as UC3
+usecase "Borrar Pedido" as UC4
+usecase "Buscar Pedidos" as UC5
+usecase "Atta Cliente" as UC6
+usecase "Buscar Cliente" as UC7
+usecase "Nuevo Producto" as UC8
+usecase "Borrar Producto" as UC9
+}
+:Administrador: as actor2
+actor1--UC1
+actor1--UC2
+actor1--UC3
+actor1--UC4
+actor1--UC5
+actor1--UC6
+actor1--UC7
+actor2--UC8
+actor2--UC9
 @enduml
