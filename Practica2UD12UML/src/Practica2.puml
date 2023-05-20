@@ -1,24 +1,22 @@
 @startuml
 :Empleado: as actor1
-rectangle "Empresa Pedidos"{
-usecase "Introducir Pedido" as UC1
-usecase "Cancelar Pedido" as UC2
+usecase "Atta Cliente" as UC1
+usecase "Introducir Pedido" as UC2
 usecase "Obtener Estado Pedido" as UC3
-usecase "Borrar Pedido" as UC4
-usecase "Buscar Pedidos" as UC5
-usecase "Atta Cliente" as UC6
-usecase "Buscar Cliente" as UC7
-usecase "Nuevo Producto" as UC8
-usecase "Borrar Producto" as UC9
-}
-:Administrador: as actor2
-actor1--UC1
-actor1--UC2
-actor1--UC3
-actor1--UC4
-actor1--UC5
-actor1--UC6
-actor1--UC7
-actor2--UC8
-actor2--UC9
+usecase "Cancelar Pedido" as UC4
+usecase "Buscar Cliente" as UC5
+usecase "Pago con tarjeta" as UC6
+usecase "Pago en cuenta" as UC7
+usecase "Buscar pedido" as UC8
+actor1 --UC1
+actor1 --UC2
+actor1 --UC3
+actor1 --UC4
+actor1--UC8
+UC1..>UC2:<<extiende>>
+UC2..>UC5:<<incluye>>
+UC6..>UC2:<<extiende>>
+UC7..>UC2:<<extiende>>
+UC3..>UC8:<<incluye>>
+UC4..>UC8:<<incluye>>
 @enduml
