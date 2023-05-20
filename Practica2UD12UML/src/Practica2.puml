@@ -1,8 +1,9 @@
 @startuml
 :Agente: as actor1
 (Evaluar Solicitud de Crédito) as UC1
-(Solicitar Información adicional al cliente) as UC2
+(Evaluar Solicitud de Crédito personal) as UC2
+(Evaluar Solicitud de Crédito empresarial) as UC3
 actor1 --> UC1
-UC2 ..> UC1 : <<extend>> Si ingresos < 1000
-
+UC2 --|> UC1
+UC3 --|> UC1
 @enduml
