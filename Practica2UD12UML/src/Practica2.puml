@@ -3,6 +3,6 @@
 (Evaluar Solicitud de Crédito) as UC1
 (Solicitar Información adicional al cliente) as UC2
 actor1 --> UC1
-UC2 ..> UC1 : <<extend>>
+UC2 ..> UC1 : <<extend>> Si ingresos < 1000
 
 @enduml
